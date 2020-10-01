@@ -16,7 +16,7 @@ Supports all categories as on the Inshorts Website. These include -
     miscellaneous
     hatke // Unconventional
     science
-    automobile
+    automobile''
 
 Usage
 1. GET Request
@@ -28,38 +28,29 @@ http://{site_address}/news?category={category_name}
 Example - http://www.exampleapi.com/news?category=science
 2. POST Request
 
-Make a post request with the category, provided as form data with name 'category' to the same route as above i.e '/news'.
+Make a post request with the category, provided as either form or json data with name/key 'category' to the same route as above i.e '/news'.
 Response Format
 
 The response JSON Object looks something like this -
-
-{
-    "category": "science",
-    "data": [
-        {
-            "author": "Gaurav Shroff",
-            "content": "NASA-backed Starlight program has selected tardigrades and a roundworm species as Earth's first interstellar voyagers who would exit the solar system on a laser-powered spacecraft. Tardigrades, also called water bears, are regarded as the most resilient life forms on Earth. The eight-legged micro-animal can survive for 30 years without food or water and endure temperatures from -270ºC to 150ºC.",
-            "date": "04 Nov 2017,Saturday",
-            "imageUrl": "http://images.newsinshorts.com.edgesuite.net/app_assets/images/2017/4nov/inshorts_image_1509767709444_984.jpg?resize=400px:*",
-            "readMoreUrl": "http://www.deepspace.ucsb.edu/projects/ets?utm_source=inshorts&utm_medium=referral&utm_campaign=fullarticle ",
-            "time": "12:38 pm",
-            "title": "\nTardigrades selected among 1st species to leave solar system\n",
-            "url": "https://www.inshorts.com/en/news/tardigrades-selected-among-1st-species-to-leave-solar-system-1509779328721"
-        },
-        {
-            "author": "Gaurav Shroff",
-            "content": "India, with the launch of ₹450-crore Mangalyaan mission on November 5, 2013, became the only country to reach the Martian orbit on its maiden voyage. Mangalyaan, also Asia's first successful Mars mission, recently completed three years in orbit despite being designed to last just six months. Notably, only 21 of the 51 previous attempts to reach Mars were successful.",
-            "date": "05 Nov 2017,Sunday",
-            "imageUrl": "http://images.newsinshorts.com.edgesuite.net/app_assets/images/2017/5nov/inshorts_image_1509863191507_302.jpg?resize=400px:*",
-            "readMoreUrl": "https://www.theverge.com/2014/9/24/6837745/india-spacecraft-reaches-mars-orbit-less-than-gravity?utm_source=inshorts&utm_medium=referral&utm_campaign=fullarticle ",
-            "time": "12:49 pm",
-            "title": "\nIndia's Mangalyaan only mission to reach Mars in 1st attempt\n",
-            "url": "https://www.inshorts.com/en/news/indias-mangalyaan-only-mission-to-reach-mars-in-1st-attempt-1509866348359"
-        },
-    ],
-    "success": true
-}
-
+{"success": true, 
+"category": "science", 
+"data": [{"title": "\nScientist lets thousands of mosquitoes bite him daily for research\n", 
+"imageUrl": "https://static.inshorts.com/inshorts/images/v1/variants/jpg/m/2020/10_oct/1_thu/img_1601530220620_633.jpg?", 
+"url": "https://www.inshorts.com/en/news/scientist-lets-thousands-of-mosquitoes-bite-him-daily-for-research-1601532043669", 
+"content": "An Australian scientist lets up to 5,000 mosquitoes bite his arm on a daily basis as part of his research to fight dengue fever. The insects Perran Ross feeds are infected with Wolbachia, a bacterium known to block the spread of dengue. His work involves infecting mosquito eggs with the bacterium and then breeding Wolbachia-carrying mosquitoes in the lab. ", 
+"author": "Krishna Veera Vanamali", 
+"date": "01 Oct 2020,Thursday", "time": "11:30 am", 
+"readMoreUrl": "https://www.timesnownews.com/amp/the-buzz/article/scientist-deliberately-feeds-himself-to-thousands-of-mosquitoes-in-quest-to-find-a-cure-for-diseases-watch/660612?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts ", 
+"videoUrl": "https://www.youtube.com/"}, 
+{"title": "\nOur nasal spray reduced COVID-19 growth in ferrets by up to 96%: Aus firm\n", 
+"imageUrl": "https://static.inshorts.com/inshorts/images/v1/variants/jpg/m/2020/09_sep/28_mon/img_1601268915206_761.jpg?", 
+"url": "https://www.inshorts.com/en/news/our-nasal-spray-reduced-covid19-growth-in-ferrets-by-up-to-96-aus-firm-1601270162650", 
+"content": "Australian biotech company Ena Respiratory has said a nasal spray that it is developing to improve human immune system to fight common cold and flu significantly reduced coronavirus growth in a recent study on animals. INNA-051 reduced COVID-19 viral replication by up to 96% in ferrets, the company said. The study was led by British government agency Public Health England.", 
+"author": "Ankush Verma", 
+"date": "28 Sep 2020,Monday", 
+"time": "10:46 am", 
+"readMoreUrl": "https://mobile.reuters.com/article/amp/idUSKBN26J04S?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts ", 
+"videoUrl": "https://www.youtube.com/"},
 Each response object has the following keys -
 
     success - true indicates the api ran successfully. Upon error the success value is false and the object includes an errorMessage key with the error message.
