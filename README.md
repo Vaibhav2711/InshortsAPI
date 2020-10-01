@@ -4,7 +4,7 @@ Categories
 
 Supports all categories as on the Inshorts Website. These include -
 
-    '' // blank to get top news from all categories
+    '' // result in bad request
     national //Indian National News
     business
     sports
@@ -18,20 +18,22 @@ Supports all categories as on the Inshorts Website. These include -
     science
     automobile''
 
-Usage
-1. GET Request
+#Usage
+##1. GET Request
 
 Make a get request of the form
 
 http://{site_address}/news?category={category_name}
 
 Example - http://www.exampleapi.com/news?category=science
-2. POST Request
+
+##2. POST Request
 
 Make a post request with the category, provided as either form or json data with name/key 'category' to the same route as above i.e '/news'.
 Response Format
 
 The response JSON Object looks something like this -
+```
 {"success": true, 
 "category": "science", 
 "data": [{"title": "\nScientist lets thousands of mosquitoes bite him daily for research\n", 
@@ -51,6 +53,7 @@ The response JSON Object looks something like this -
 "time": "10:46 am", 
 "readMoreUrl": "https://mobile.reuters.com/article/amp/idUSKBN26J04S?utm_campaign=fullarticle&utm_medium=referral&utm_source=inshorts ", 
 "videoUrl": "https://www.youtube.com/"},
+```
 Each response object has the following keys -
 
     success - true indicates the api ran successfully. Upon error the success value is false and the object includes an errorMessage key with the error message.
